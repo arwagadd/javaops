@@ -1,0 +1,12 @@
+package javaoperations;
+
+public class Manager extends Employee {
+	
+	private String department;
+
+	public Manager(String name, String employeeId, double salary, String d) {
+		super(name, employeeId, salary);
+		this.department = d;
+	}
+	
+}

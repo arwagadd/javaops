@@ -1,0 +1,27 @@
+package javaoperations;
+
+public class Vehicle {
+	
+	private String brand;
+	private String manufactureYear;
+	
+	public String getBrand() {
+		return brand;
+	}
+	public String getManufactureYear() {
+		return manufactureYear;
+	}
+	public void setBrand(String b) {
+		brand = b;
+	}
+	public void setManufactureYear(String m) {
+		manufactureYear = m;
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+package javaoperations;
+
+public class Vehicle {
+	
+	private String brand;
+	private String manufactureYear;
+	
+	public Vehicle() {
+		
+	}
+	
+	public String getBrand() {
+		return brand;
+	}
+	public String getManufactureYear() {
+		return manufactureYear;
+	}
+	public void setBrand(String b) {
+		brand = b;
+	}
+	public void setManufactureYear(String m) {
+		manufactureYear = m;
+	}
+	
+	public static void main(String[] args) {
+		Vehicle v1 = new Vehicle();
+		v1.setBrand("Porsche");
+		v1.setManufactureYear("2019");
+		System.out.println("Vehicle 1: " + v1.getBrand() + ", " + v1.getManufactureYear())
+		
+	}
+
+}

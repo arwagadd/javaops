@@ -1,0 +1,284 @@
+package javaoperations;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Sample {
+	static int i;
+	static int result = 1;
+	
+	
+	// Factorial using for loop
+	public static int factorial(int n) {
+		for(i=n;i>=1;i--){
+			result *= i;
+		}
+		return result;
+	}
+	
+	// Factorial using Recursion
+	public int factorialRecursion(int n) {
+		if (n==0)
+			return 1;
+		else 
+			System.out.println(n);
+			return n * factorialRecursion(n-1);
+	}
+	
+	public static boolean palindromeChecker(String word) {
+		int x = word.length() - 1; // 4
+		String reversed = "";
+		for(int i=x;i>=0;i--) {
+			reversed += word.charAt(i);
+		}
+		return word.equals(reversed);
+		
+	}
+	
+	// Fibonacci Recursion
+	public static int fibonacci(int n) {
+		if(n==1)
+			return 1;
+		if (n==0)
+			return 0;
+		else {
+			return fibonacci(n-1) + fibonacci(n-2);
+		}
+	}
+	
+	// Fib For loop
+	public static int fib(int n) {
+		int[] arr = new int[n+1]; // how to set the arr size to n+1?
+		for(int i=2;i<n+1;i++) {
+			arr[0]=0;
+			arr[1]=1;
+			arr[i] = arr[i-1] + arr[i-2]; 
+		}
+		return arr[n];
+	}
+	
+	// Prime Number Checker 
+	public boolean isPrime(int n) {
+		if(n<=1) {
+			return false;
+		}
+		for(int i=2;i<n;i++) {
+			if(n%i==0) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	// Factorization of  a Number
+	public static List<Integer> factorization(int n){
+		List<Integer> factList = new ArrayList<>();
+		for(int i=1;i<=n;i++) {
+			if(n%i==0) {
+				factList.add(i);
+			}
+		}
+		return factList;
+	}
+	
+	// Factorization of  a Number using LinkedList
+		public static LinkedList<Integer> factorizationLL(int n){
+			LinkedList<Integer> LList = new LinkedList<>();
+			for(int i=1;i<=n;i++) {
+				if(n%i==0) {
+					LList.add(i);
+				}
+			}
+			return LList;
+		}
+		
+	// Armstrong Number Checker
+		public static boolean isArmstrong(int n) {
+		int sum = 0;
+		String numString = Integer.toString(n);
+		for(int i=0;i<numString.length();i++) {
+			char digitChar = numString.charAt(i);
+			int digit = Character.getNumericValue(digitChar);
+			sum += Math.pow(digit, numString.length());
+		}
+		if (sum == n) {
+			return true;
+		}
+		return false;
+		}
+	
+		// Continue Statement
+		public static LinkedList<Integer> continueExample() {
+			LinkedList<Integer> list = new LinkedList<>();
+			int[] numbers = {1,2,3,4};
+			for(int i=0;i<numbers.length;i++) {
+				if(numbers[i]%2==1) {  // skips odd numbers
+					continue;
+				}
+				else {
+					list.add(numbers[i]);
+				}
+			}
+			return list;
+		}
+		
+		// Break Statement
+		public static void breakExample() {
+			int[] numbers = {1,2,3};
+			int searchingNumber = 2;
+			for(int i=0;i<numbers.length;i++) {
+				if(searchingNumber==i)
+					break;  
+			}
+		}
+		
+		
+	
+	public static void main(String args[]) {
+		
+		Scanner scanner2 = new Scanner(System.in);
+		
+		// Pattern Printing (Square)
+		System.out.println("Enter the number of rows and columns for Pattern Printing");
+		int number = scanner2.nextInt();
+		for(int i=0;i<number;i++) {
+			for(int j=0;j<number;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			}
+		
+		// Pattern Printing (Upside Down Triangle)
+		System.out.println("Upside Down Triangle");
+		for(int i=0;i<number;i++) {
+			for(int j=i;j<number;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			}
+		
+		// Pattern Printing (Triangle)
+		System.out.println("Triangle");
+		for(int i=0;i<number;i++) {
+			for(int j=i;j<number;j++) {
+				if(j>0) {
+					for(int k=0;k<i+1;k++) {
+						System.out.print(" ");
+					}
+				}
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("Enter numbers separated by commas");
+		String input = scanner2.nextLine();
+		
+		String[] numbersAsString = input.split(",");
+		
+		ArrayList<Integer> allNumbers= new ArrayList<>();
+		for(String num : numbersAsString) {
+			int numb = Integer.parseInt(num);
+			allNumbers.add(numb);
+		}
+		
+		int min = 0,max = 0;;
+
+		for(int i=0;i<allNumbers.size();i++) {
+			if(allNumbers.get(i)> max) {
+				max = allNumbers.get(i);
+			}
+			if(allNumbers.get(i)< min) {
+				min = allNumbers.get(i);
+			}
+		}
+		System.out.println("The list entered by the user: " + allNumbers);
+		System.out.println("The maximum is " + max);
+		System.out.println("The minimum is " + min);
+
+				
+		// Continue Statement
+		System.out.println(Sample.continueExample());
+		
+		// Armstrong Number Checker
+		Boolean armstrongResult = isArmstrong(9474);
+		System.out.println("Armstrong result is " + armstrongResult);
+		
+		// Factorization of  a Number
+		List<Integer> list = factorization(number);
+		System.out.println(list);
+		
+		// Factorization of  a Number using LinkedList
+		LinkedList<Integer> LL = factorizationLL(number);
+		System.out.println(LL);
+		
+		// Prime Number Checker 
+		Sample s1 = new Sample();
+		Boolean res = s1.isPrime(number);
+		System.out.println(res);
+		
+		
+		// Table of a Number
+		
+		System.out.println("Multiplication table for " + number);
+
+		for(int i=1;i<51;i++) {
+			int result = number * i;
+			System.out.println(number + " " + "*" + " " + i + " " + "=" + " " + result);
+		}
+		
+		// Fib for loop
+		System.out.println(fib(8));
+		
+		// Fib Recursion
+		System.out.println(fibonacci(6));
+		
+		// Palindrome Checker
+		System.out.println(palindromeChecker("dad"));
+		
+		// Factorial
+			System.out.println(factorial(10));
+			
+			Sample sample = new Sample();
+			System.out.println(sample.factorialRecursion(3));
+		
+		// Arithmetic Calculator
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter first value");
+		int x = scanner.nextInt();
+		System.out.println("Enter second value");
+		int y = scanner.nextInt();
+		System.out.println("Enter operation to be done");
+		char operator = scanner.next().charAt(0);
+		
+		double result = 0;
+		
+		switch(operator) {
+		case '+':
+			result = x + y;
+			break;
+		case '-':
+			result = x - y;
+			break;
+		case '*':
+			result = x * y;
+			break;
+		case '/':
+			if(y!=0) {
+				result = (double)x / y;
+			}
+			else {
+				System.out.println("Error: Division by zero");
+				return;
+			}
+			break;
+		default: 
+			System.out.println("Invalid operator");
+				
+		}
+		
+		System.out.println("Result: " + result);
+				
+	}
+}

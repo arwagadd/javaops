@@ -1,0 +1,8 @@
+package javaoperations;
+
+public class Person {
+	private int age;
+	private String name;
+	private Gender gender;
+
+}

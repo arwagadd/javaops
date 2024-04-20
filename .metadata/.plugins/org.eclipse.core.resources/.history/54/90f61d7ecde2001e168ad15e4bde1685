@@ -1,0 +1,59 @@
+package javaoperations;
+import java.util.Scanner;
+
+public class Sample {
+	static int i = 0;
+	static int result = 1;
+	
+	
+	public static int factorial(int n) {
+		for(i=n;i<=n;i--){
+			result *= i;
+		}
+		return result;
+	}
+	
+	public static void main(String args[]) {
+		
+		// Arithmetic Calculator
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter first value");
+		int x = scanner.nextInt();
+		System.out.println("Enter second value");
+		int y = scanner.nextInt();
+		System.out.println("Enter operation to be done");
+		char operator = scanner.next().charAt(0);
+		
+		double result = 0;
+		
+		switch(operator) {
+		case '+':
+			result = x + y;
+			break;
+		case '-':
+			result = x - y;
+			break;
+		case '*':
+			result = x * y;
+			break;
+		case '/':
+			if(y!=0) {
+				result = (double)x / y;
+			}
+			else {
+				System.out.println("Error: Division by zero");
+				return;
+			}
+			break;
+		default: 
+			System.out.println("Invalid operator");
+				
+		}
+		
+		System.out.println("Result: " + result);
+		
+		// Factorial
+		factorial(3);
+		
+	}
+}

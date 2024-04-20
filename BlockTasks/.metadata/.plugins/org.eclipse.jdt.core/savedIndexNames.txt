@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+C:\Users\USER\eclipse-workspace\BlockTasks\.metadata\.plugins\org.eclipse.jdt.core

@@ -1,0 +1,44 @@
+package javaoperations;
+import java.util.Scanner;
+
+public class Sample {
+	
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter first value");
+		int x = scanner.nextInt();
+		System.out.println("Enter second value");
+		int y = scanner.nextInt();
+		System.out.println("Enter operation to be done");
+		char operator = scanner.next().charAt(0);
+		
+		double result = 0;
+		
+		switch(operator) {
+		case '+':
+			result = x + y;
+			break;
+		case '-':
+			result = x - y;
+			break;
+		case '*':
+			result = x * y;
+			break;
+		case '/':
+			if(y!=0) {
+				result = x / y;
+			}
+			else {
+				System.out.println("Error: Division by zero");
+				return;
+			}
+			break;
+		default: 
+			System.out.println("Invalid operator");
+				
+		}
+		
+		System.out.println("Result: " + result);
+		
+	}
+}

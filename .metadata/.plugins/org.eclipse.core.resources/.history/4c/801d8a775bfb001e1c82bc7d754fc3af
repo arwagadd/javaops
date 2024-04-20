@@ -1,0 +1,20 @@
+package javaoperations;
+
+public class StringBufferExample {
+	
+	public static StringBuffer  appendToString(StringBuffer s,String str) {
+		return s.append(str);
+	}
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer("Arwa");
+		String s1 = new String("Arwa");
+		String s2 = new String("arwa");
+		System.out.println(appendToString(str,"Wail"));
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equalsIgnoreCase(s2));
+		System.out.println(s1.compareTo(s2));
+
+	}
+	
+	
+}

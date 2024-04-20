@@ -1,0 +1,19 @@
+package javaoperations;
+
+public class Circle extends Shape {
+	private double radius;
+	public Circle(int r) {
+		this.radius = r;
+	}
+	
+	@Override
+	public double calculateArea() {
+		return radius * radius * Math.PI;
+	}
+	@Override
+	public double calculatePerimeter() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

@@ -1,0 +1,33 @@
+package javaoperations;
+
+import java.util.ArrayList;
+
+public class Library {
+	
+	private ArrayList<Item> items;
+	
+	public void setItems(ArrayList<Item> items) {
+		this.items=items;
+	}
+	public ArrayList<Item> getItems(){
+		return items;
+	}
+	public void addItem(Item item) {
+		items.add(item);
+	}
+	public void removeItem(Item item) {
+		items.remove(item);
+	}
+	public Library() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Library library = new Library();
+		Book book = new Book("Java Programming", "John");
+		DVD dvd = new DVD("The Matrix", "Leena");
+		library.addItem(book);
+		library.removeItem(dvd);
+	}
+
+}

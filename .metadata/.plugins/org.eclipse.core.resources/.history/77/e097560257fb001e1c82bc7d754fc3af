@@ -1,0 +1,12 @@
+package javaoperations;
+
+public class StringBufferExample {
+	
+	public static StringBuffer  appendToString(StringBuffer s,String str) {
+		return s.append(str);
+	}
+	public static void main(String[] args) {
+		System.out.println(appendToString("Arwa"),"Wail");
+	}
+	
+}

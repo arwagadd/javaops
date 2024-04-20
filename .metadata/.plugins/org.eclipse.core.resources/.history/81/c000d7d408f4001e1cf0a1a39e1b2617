@@ -1,0 +1,33 @@
+package javaoperations;
+
+import java.util.ArrayList;
+
+public class Professor extends Person{
+
+	
+	private ArrayList<String> courses;
+	
+	public void setCourses(ArrayList<String> c) {
+		this.courses = c;
+	}
+	public ArrayList<String> getCourses(){
+		return this.courses;
+	}
+	
+	
+	@Override
+	public void displayInfo() {
+		Professor p1 = new Professor();
+		p1.setName("Soubra");
+		p1.setAge(43);
+		
+		ArrayList<String> courseList = new ArrayList();
+		courseList.add("Operating Systems");
+		courseList.add("Computer Architecture");
+		p1.setGender(Gender.MALE);
+		p1.setCourses(courseList);
+		p1.displayInfo();
+	}
+
+	
+}

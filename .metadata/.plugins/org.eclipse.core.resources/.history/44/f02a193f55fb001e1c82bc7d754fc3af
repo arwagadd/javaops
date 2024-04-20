@@ -1,0 +1,13 @@
+package javaoperations;
+
+public class StringBufferExample {
+	
+	public static void appendToString(StringBuffer s) {
+		s.append("appendUsingStringBuffer");
+	}
+	public static void main(String[] args) {
+		
+	}
+	
+
+}

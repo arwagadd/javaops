@@ -1,0 +1,20 @@
+package javaoperations;
+
+import java.util.ArrayList;
+
+public class Library {
+	
+	private ArrayList<Item> items;
+	public void setItems(ArrayList<Item> items) {
+		this.items=items;
+	}
+	public Library() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Library library = new Library();
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package javaoperations;
+
+public class Student extends Person {
+
+
+	@Override
+	public void displayInfo() {
+		System.out.println("Name: " + getName());
+		System.out.println("Age: " + getAge());
+		System.out.println("Gender: " + getGender());
+		System.out.println("Position: " + getPosition());
+	
+	}
+	
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.setName("Arwa");
+		s1.setAge(22);
+		s1.setGender(Gender.FEMALE);
+		s1.setPosition("Student");
+		s1.displayInfo();
+	}
+
+}

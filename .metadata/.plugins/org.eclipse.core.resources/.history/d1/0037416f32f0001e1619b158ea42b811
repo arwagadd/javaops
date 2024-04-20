@@ -1,0 +1,23 @@
+package javaoperations;
+
+public class Person {
+	private int age;
+	private String name;
+	private Gender gender;
+
+	public Person(int age,String name,Gender gender) {
+		this.age = age;
+		this.name = name;
+		this.gender = gender;
+	}
+	
+	public void setAge(int x) {
+		x=this.age;
+	}
+	public void setName(String n) {
+		n=this.name;
+	}
+	public void setGender(Gender g) {
+		g=this.gender;
+	}
+}

@@ -1,0 +1,126 @@
+package javaoperations;
+import java.util.Scanner;
+
+public class Sample {
+	static int i;
+	static int result = 1;
+	
+	
+	// Factorial using for loop
+	public static int factorial(int n) {
+		for(i=n;i>=1;i--){
+			result *= i;
+		}
+		return result;
+	}
+	
+	// Factorial using Recursion
+	public int factorialRecursion(int n) {
+		if (n==0)
+			return 1;
+		else 
+			System.out.println(n);
+			return n * factorialRecursion(n-1);
+	}
+	
+	public static boolean palindromeChecker(String word) {
+		int x = word.length() - 1; // 4
+		String reversed = "";
+		for(int i=x;i>=0;i--) {
+			reversed += word.charAt(i);
+		}
+		return word.equals(reversed);
+		
+	}
+	
+	// Fibonacci Recusrsion
+	public static int fibonacci(int n) {
+		if(n==1)
+			return 1;
+		if (n==0)
+			return 0;
+		else {
+			return fibonacci(n-1) + fibonacci(n-2);
+		}
+	}
+	
+	// Fib For loop
+	public static int fib(int n) {
+		int[] arr = new int[n+1]; // how to set the arr size to n+1?
+		for(int i=2;i<n+1;i++) {
+			arr[0]=0;
+			arr[1]=1;
+			arr[i] = arr[i-1] + arr[i-2]; 
+		}
+		return arr[n];
+	}
+	
+	public static void main(String args[]) {
+		
+		// Table of a Number
+		
+		Scanner scanner2 = new Scanner(System.in);
+		int number = scanner2.nextInt();
+		
+		for(int i=1;i<20;i++) {
+			System.out.println("Multiplication table for " + number);
+			int result = number * i;
+			System.out.println(number + " " + "*" + " " + i + " " + "=" + " " + result);
+		}
+		
+		// Fib for loop
+		System.out.println(fib(8));
+		
+		// Fib Recursion
+		System.out.println(fibonacci(6));
+		
+		// Palindrome Checker
+		System.out.println(palindromeChecker("dad"));
+		
+		// Factorial
+			System.out.println(factorial(10));
+			
+			Sample sample = new Sample();
+			System.out.println(sample.factorialRecursion(3));
+		
+		// Arithmetic Calculator
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter first value");
+		int x = scanner.nextInt();
+		System.out.println("Enter second value");
+		int y = scanner.nextInt();
+		System.out.println("Enter operation to be done");
+		char operator = scanner.next().charAt(0);
+		
+		double result = 0;
+		
+		switch(operator) {
+		case '+':
+			result = x + y;
+			break;
+		case '-':
+			result = x - y;
+			break;
+		case '*':
+			result = x * y;
+			break;
+		case '/':
+			if(y!=0) {
+				result = (double)x / y;
+			}
+			else {
+				System.out.println("Error: Division by zero");
+				return;
+			}
+			break;
+		default: 
+			System.out.println("Invalid operator");
+				
+		}
+		
+		System.out.println("Result: " + result);
+		
+		
+		
+	}
+}

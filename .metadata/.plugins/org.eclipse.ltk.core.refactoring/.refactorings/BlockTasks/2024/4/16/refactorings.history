@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;javaoperations.StringBuffer&apos; to &apos;StringBufferExample&apos;&#x0D;&#x0A;- Original project: &apos;BlockTasks&apos;&#x0D;&#x0A;- Original element: &apos;javaoperations.StringBuffer&apos;&#x0D;&#x0A;- Renamed element: &apos;javaoperations.StringBufferExample&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;StringBuffer&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;javaoperations{StringBuffer.java[StringBuffer" matchStrategy="1" name="StringBufferExample" qualified="false" references="true" similarDeclarations="false" stamp="1713205211991" textual="false" version="1.0"/>
+</session>

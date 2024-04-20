@@ -1,0 +1,6 @@
+package javaoperations;
+
+public class Book extends Item{
+	
+
+}

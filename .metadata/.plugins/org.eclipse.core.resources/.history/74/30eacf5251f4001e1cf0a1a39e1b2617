@@ -1,0 +1,31 @@
+package javaoperations;
+
+public class Rectangle extends Shape{
+	private double length;
+	private double width;
+	
+	public void setLength(double l) {
+		this.length = l;
+	}
+	public void setWidth(double w) {
+		this.width = w;
+	}
+	public double getWidth() {
+		return width;
+	}
+	public double getLength() {
+		return length;
+	}
+	@Override
+	public double calculateArea() {
+		return length * width;
+	}
+	@Override
+	public double calculatePerimeter() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+
+}

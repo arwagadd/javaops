@@ -1,0 +1,67 @@
+package javaoperations;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+public class ArraysOperations {
+	
+	public static int[] removeDuplicates(int[] array) {
+		// Convert the array to a list
+		List<Integer> list = new ArrayList<>();
+		for(int num : array) {
+			list.add(num);
+		}
+		
+		// Concert the list to a Set (doesn't allow duplicates)
+		Set<Integer> set = new HashSet<>(list);
+		
+		// Convert the set back to array
+		int[] result = new int[set.size()];
+		int i=0;
+		for(int num : set) {
+			result[i++] = num;
+		}
+		return result;
+		
+	}
+	public static int[] rotateElementsRight(int[] arr) {
+		for(int i=1;i<arr.length-1;i++) {
+			arr[i]=arr[i-1];
+		}
+		arr[0]=arr[arr.length-1];
+		return arr;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the size of the array.");
+		int size = scanner.nextInt();
+		
+		int[] array = new int[size];
+		
+		System.out.println("Enter the elements of the array.");
+		for(int i=0;i<size;i++) {
+			array[i] = scanner.nextInt();
+		}
+		scanner.close();
+		
+		int[] uniqueElements = removeDuplicates(array);		
+		for(int num : uniqueElements) {
+			System.out.print(num + " ");
+		}
+		
+		int[] rotatedElementsRight = rotateElementsRight(array);
+		for(int n : rotatedElementsRight) {
+			System.out.print(n + " ");
+		}
+		
+		
+
+}
+}
+	

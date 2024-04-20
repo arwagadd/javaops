@@ -1,0 +1,43 @@
+package javaoperations;
+
+public class Person {
+	private int age;
+	private String name;
+	private Gender gender;
+
+	public Person() {
+		
+	}
+	
+	// Getters
+	public void setAge(int x) {
+		this.age=x;
+	}
+	public void setName(String n) {
+		this.name=n;
+	}
+	public void setGender(Gender g) {
+		this.gender=g;
+	}
+	
+	// Setters
+	public int getAge() {
+		return this.age;
+	}
+	public String getName() {
+		return this.name;
+	}
+	public Gender getGender() {
+		return this.gender;
+	}
+	
+	public static void main(String[] args) {
+		Person p1 = new Person();
+		p1.setName("Arwa");
+		p1.setAge(22);
+		p1.setGender(Gender.FEMALE);
+		System.out.println("Person 1 Info");
+		System.out.println("Name: " + p1.getName() + "\n" + "Age: " + p1.getAge() + "\n" + "Gender: " + p1.getGender());
+	}
+	
+}
