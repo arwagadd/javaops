@@ -1,0 +1,8 @@
+package javaoperations;
+
+public class DeadlockExample {
+	final String resource1  = "r1";
+	final String resource2  = "r2";
+
+
+}
